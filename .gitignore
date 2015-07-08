@@ -2,5 +2,5 @@
 /.vagrant
 /vendor
 /node_modules
-Homestead.yaml
+/homestead.yaml
 .env

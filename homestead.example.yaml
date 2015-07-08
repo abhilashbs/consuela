@@ -1,0 +1,27 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+hostname: consuela.app
+name: consuela
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "<LOCATION ON YOUR HOST MACHINE>"
+      to: "/home/vagrant/consuela"
+
+sites:
+    - map: consuela.app
+      to: "/home/vagrant/consuela/public"
+
+databases:
+    - consuela
+
+variables:
+    - key: APP_ENV
+      value: local
